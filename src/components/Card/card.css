@@ -6,7 +6,7 @@
 } */
 
 .card-title {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: bold;
   color: #333;
   margin: 0 0 10px 0;
@@ -121,9 +121,9 @@
   justify-content: center;
   background-color: #276404;
   color: #fff;
-  width: 30px;
-  height: 30px;
-  font-size: 14px;
+  width: 21px;
+  height: 21px;
+  font-size: 10px;
   font-weight: bold;
   border-radius: 50%;
   text-transform: uppercase;

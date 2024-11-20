@@ -4,8 +4,14 @@ import { Dashboard } from './components/Dashboard';
 function App() {
   const [tickets, setTickets] = useState([]);
   const [userData, setUserData] = useState({});
-  const [grouping, setGrouping] = useState('status');
-  const [ordering, setOrdering] = useState('priority');
+  const [grouping, setGrouping] = useState(() => {
+    // Retrieve grouping from localStorage or default to 'status'
+    return localStorage.getItem('grouping') || 'status';
+  });
+  const [ordering, setOrdering] = useState(() => {
+    // Retrieve ordering from localStorage or default to 'priority'
+    return localStorage.getItem('ordering') || 'priority';
+  });
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -19,6 +25,12 @@ function App() {
         setLoading(false);
       });
   }, []);
+
+  useEffect(() => {
+    // Save grouping and ordering to localStorage whenever they change
+    localStorage.setItem('grouping', grouping);
+    localStorage.setItem('ordering', ordering);
+  }, [grouping, ordering]);
 
   return (
     <div className="App">

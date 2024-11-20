@@ -14,7 +14,8 @@ export const Card = ({ ticket, user }) => {
 
   return (
     <div className="card">
-      <strong>{ticket.id}</strong>
+      <strong style={{ fontSize: '12px', fontWeight: 'bold', color: '#grey' }} >{ticket.id}</strong>
+      {/* <h3>{ticket.id}</h3> */}
       <h3 className="card-title">{ticket.title}</h3>
       <div className="card-footer">
       <div className="three-dots-icon-container">

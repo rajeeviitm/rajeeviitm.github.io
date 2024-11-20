@@ -106,7 +106,7 @@ export const Dashboard = ({
               <div key={title} className="dashboard-column">
                 <div className="column-header">
                   {icon && <img src={icon} alt={`${title} Icon`} />}
-                  <h2>{title}</h2>
+                  <h3>{title}</h3>
                   <div className="column-actions">
                     <img src={addIcon} alt="Add" className="add-icon" />
                     <img src={threeDotMenuIcon} alt="Menu" className="menu-icon" />
